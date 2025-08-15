@@ -104,16 +104,20 @@ for (const principle of typedWcagData.wcag22.principles) {
                         </td>
                         <td class="border border-gray-300 px-2 py-1 text-sm">
                             <select class="inline-block w-full text-xs" aria-label={`「${criterion.title}」の「適用」「非適用」を選択`}>
-                                <option value="">未選択</option>
+                                <option value="" selected>
+                                    未選択
+                                </option>
                                 <option value="applicable">適用</option>
                                 <option value="not-applicable">非適用</option>
                             </select>
                         </td>
                         <td class="border border-gray-300 px-2 py-1 text-sm">
                             <select class="inline-block w-full text-xs" aria-label={`「${criterion.title}」の試験結果（「適合」または「不適合」）を選択`}>
-                                <option value="">未選択</option>
-                                <option value="pass">適合</option>
-                                <option value="fail">不適合</option>
+                                <option value="" selected>
+                                    未選択
+                                </option>
+                                <option value="pass">✅ 適合</option>
+                                <option value="fail">❌ 不適合</option>
                             </select>
                         </td>
                         <td class="border border-gray-300 p-4 text-sm">
