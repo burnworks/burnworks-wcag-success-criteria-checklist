@@ -1,6 +1,6 @@
 # WCAG Success Criteria Checklist
 
-WCAG 達成基準チェックリスト（HTML版）
+[WCAG 達成基準チェックリスト（HTML版）](https://burnworks.github.io/burnworks-wcag-success-criteria-checklist/)
 
 WCAG 達成基準チェックリストを HTML で。WCAG 2.0 ～ 2.2 までのバージョンと、適合レベルを選択できます。
 
