@@ -1,46 +1,9 @@
-# Astro Starter Kit: Basics
+# WCAG Success Criteria Checklist
 
-```sh
-npm create astro@latest -- --template basics
-```
+WCAG 達成基準チェックリスト（HTML版）
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+WCAG 達成基準チェックリストを HTML で。WCAG 2.0 ～ 2.2 までのバージョンと、適合レベルを選択できます。
 
-## 🚀 Project Structure
+## 翻訳データ
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+この達成基準チェックリストで使用している達成基準のテキストは、「[Web Content Accessibility Guidelines (WCAG) 2.2 - W3C Recommendation 12 December 2024](https://www.w3.org/TR/2024/REC-WCAG22-20241212/)」を「[ウェブアクセシビリティ基盤委員会 (WAIC) の翻訳ワーキンググループ](https://waic.jp/committee/wg4/)」が翻訳した版を使用させていただいています。
