@@ -1,0 +1,912 @@
+{
+  "wcag22": {
+    "version": "2.2",
+    "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+    "principles": [
+      {
+        "principle": "1",
+        "title": "知覚可能",
+        "description": "情報およびユーザインタフェース コンポーネントは、利用者が知覚できる方法で利用者に提示可能でなければならない。",
+        "guidelines": [
+          {
+            "guideline": "1.1",
+            "title": "テキストによる代替",
+            "description": "すべての非テキストコンテンツには、拡大印刷、点字、音声、シンボル、平易な言葉などの利用者が必要とする形式に変換できるように、テキストによる代替を提供する。",
+            "success_criteria": [
+              {
+                "criterion": "1.1.1",
+                "title": "非テキストコンテンツ",
+                "level": "A",
+                "description": "<p>利用者に提示されるすべての非テキストコンテンツには、同等の目的を果たすテキストによる代替が提供されている。ただし、次の場合は除く:</p><dl><dt>コントロール、入力</dt><dd>非テキストコンテンツが、コントロール又は利用者の入力を受け付けるものであるとき、その目的を説明する名前 (name) を提供している。(コントロール及び利用者の入力を受け入れるコンテンツに関するその他の要件は、<a href=\"#name-role-value\">達成基準 4.1.2 を参照。)</dd><dt>時間依存メディア</dt><dd>非テキストコンテンツが、時間に依存したメディアであるとき、テキストによる代替は、少なくとも、その非テキストコンテンツを識別できる説明を提供している。(メディアに関するその他の要件は、<a href=\"#time-based-media\">ガイドライン 1.2 を参照。)</dd><dt>テスト</dt><dd>非テキストコンテンツが、テキストで提示されると無効になるテスト又は演習のとき、テキストによる代替は、少なくともその非テキストコンテンツを識別できる説明を提供している。</dd><dt>感覚的</dt><dd>非テキストコンテンツが、特定の感覚的体験を創り出すことを主に意図しているとき、テキストによる代替は、少なくともその非テキストコンテンツを識別できる説明を提供している。</dd><dt>CAPTCHA</dt><dd>非テキストコンテンツが、コンピュータではなく人間がコンテンツにアクセスしていることを確認する目的で用いられているとき、テキストによる代替は、その非テキストコンテンツの目的を特定し、説明している。なおかつ、他の感覚による知覚に対応して出力する CAPTCHA の代替形式を提供することで、様々な障害に対応している。</dd><dt>装飾、フォーマット、非表示</dt><dd>非テキストコンテンツが、純粋な装飾である、見た目の整形のためだけに用いられている、又は利用者に提供されるものではないとき、支援技術が無視できるように実装されている。</dd></dl>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/non-text-content.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              }
+            ]
+          },
+          {
+            "guideline": "1.2",
+            "title": "時間依存メディア",
+            "description": "時間依存メディアには代替コンテンツを提供する。",
+            "success_criteria": [
+              {
+                "criterion": "1.2.1",
+                "title": "音声のみ及び映像のみ (収録済み)",
+                "level": "A",
+                "description": "<p>収録済の音声しか含まないメディア及び収録済の映像しか含まないメディアは、次の事項を満たしている。ただし、その音声又は映像がメディアによるテキストの代替であって、メディアによる代替であることが明確にラベル付けされている場合は除く:</p><dl><dt>収録済の音声のみ</dt><dd>時間依存メディアに対する代替コンテンツによって、収録済の音声しか含まないコンテンツと同等の情報を提供している。</dd><dt>収録済の映像のみ</dt><dd>時間依存メディアに対する代替コンテンツ又は音声トラックによって、収録済の映像しか含まないコンテンツと同等の情報を提供している。</dd></dl>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/audio-only-and-video-only-prerecorded.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.2.2",
+                "title": "キャプション (収録済み)",
+                "level": "A",
+                "description": "<p>同期したメディアに含まれているすべての収録済の音声コンテンツに対して、キャプションが提供されている。ただし、その同期したメディアがメディアによるテキストの代替であって、メディアによる代替であることが明確にラベル付けされている場合は除く。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/captions-prerecorded.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.2.3",
+                "title": "音声解説、又はメディアに対する代替 (収録済み)",
+                "level": "A",
+                "description": "<p>同期したメディアに含まれている収録済の映像コンテンツに対して、時間依存メディアに対する代替コンテンツ又は音声解説が提供されている。ただし、その同期したメディアがメディアによるテキストの代替であって、メディアによる代替であることが明確にラベル付けされている場合は除く。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/audio-description-or-media-alternative-prerecorded.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.2.4",
+                "title": "キャプション (ライブ)",
+                "level": "AA",
+                "description": "<p>同期したメディアに含まれているすべてのライブの音声コンテンツに対して、キャプションが提供されている。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/captions-live.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.2.5",
+                "title": "音声解説 (収録済み)",
+                "level": "AA",
+                "description": "<p>同期したメディアに含まれているすべての収録済の映像コンテンツに対して、音声解説が提供されている。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/audio-description-prerecorded.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.2.6",
+                "title": "手話 (収録済み)",
+                "level": "AAA",
+                "description": "<p>同期したメディアに含まれているすべての収録済の音声コンテンツに対して、手話通訳が提供されている。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/sign-language-prerecorded.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.2.7",
+                "title": "拡張音声解説 (収録済み)",
+                "level": "AAA",
+                "description": "<p>前景音の合間が、音声解説で映像の意味を伝達するのに不十分な場合、同期したメディアに含まれているすべての収録済の映像コンテンツに対して、拡張音声解説が提供されている。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/extended-audio-description-prerecorded.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.2.8",
+                "title": "メディアに対する代替 (収録済み)",
+                "level": "AAA",
+                "description": "<p>すべての収録済の同期したメディア及びすべての収録済の映像しか含まないメディアに対して、時間依存メディアに対する代替コンテンツが提供されている。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/media-alternative-prerecorded.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.2.9",
+                "title": "音声のみ (ライブ)",
+                "level": "AAA",
+                "description": "<p>ライブの音声しか含まないコンテンツに対して、それと同等の情報を提示する、時間依存メディアの代替コンテンツが提供されている。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/audio-only-live.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              }
+            ]
+          },
+          {
+            "guideline": "1.3",
+            "title": "適応可能",
+            "description": "情報、及び構造を損なうことなく、様々な方法 (例えば、よりシンプルなレイアウト) で提供できるようにコンテンツを制作すること。",
+            "success_criteria": [
+              {
+                "criterion": "1.3.1",
+                "title": "情報及び関係性",
+                "level": "A",
+                "description": "<p>何らかの形で提示されている情報、構造、及び関係性は、プログラムによる解釈が可能である、又はテキストで提供されている。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/info-and-relationships.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.3.2",
+                "title": "意味のあるシーケンス",
+                "level": "A",
+                "description": "<p>コンテンツが提示されている順序が意味に影響を及ぼす場合には、正しく読むシーケンスはプログラムによる解釈が可能である。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/meaningful-sequence.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.3.3",
+                "title": "感覚的な特徴",
+                "level": "A",
+                "description": "<p>コンテンツを理解し操作するための説明は、形、色、大きさ、視覚的な位置、方向、又は音のような、構成要素が持つ感覚的な特徴だけに依存していない。</p>",
+                "note": "<p>色に関する要件は、<a href=\"#distinguishable\">ガイドライン 1.4 を参照。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/sensory-characteristics.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.3.4",
+                "title": "表示の向き",
+                "level": "AA",
+                "new_in_21": true,
+                "description": "<p>コンテンツは、その表示及び操作を、縦向き (portrait) 又は横向き (landscape) のような単一のディスプレイの向きに制限しない。ただし、特定のディスプレイの向きが必要不可欠な場合は除く。</p>",
+                "note": "<p>特定のディスプレイの向きが必要不可欠となり得る例としては、銀行の小切手、ピアノのアプリケーション、プロジェクター若しくはテレビ向けのスライド、又はコンテンツが必ずしも横向き (landscape) 若しくは縦向き (portrait) のディスプレイの向きに制限されないバーチャルリアリティのコンテンツが挙げられる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/orientation.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.3.5",
+                "title": "入力目的の特定",
+                "level": "AA",
+                "new_in_21": true,
+                "description": "<p>利用者の情報を集める入力フィールドのそれぞれの目的は、次の場合にプログラムによる解釈が可能である:</p><ul><li>入力フィールドが、<a href=\"#input-purposes\">利用者情報の入力目的の節で挙げられている目的にあてはまる、かつ</li><li>コンテンツが、その入力フィールドの目的を特定するためのオートコンプリート属性を持つマークアップ言語を用いて実装されている</li></ul>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/identify-input-purpose.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.3.6",
+                "title": "目的の特定",
+                "level": "AAA",
+                "description": "<p>マークアップ言語で実装されたコンテンツでは、ユーザインタフェース コンポーネント、アイコン、領域の目的はプログラムによる解釈が可能である。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/identify-purpose.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              }
+            ]
+          },
+          {
+            "guideline": "1.4",
+            "title": "判別可能",
+            "description": "コンテンツを、利用者にとって見やすく、聞きやすいものにすること。これには、前景と背景を区別することも含む。",
+            "success_criteria": [
+              {
+                "criterion": "1.4.1",
+                "title": "色の使用",
+                "level": "A",
+                "description": "<p>色が、情報を伝える、動作を示す、反応を促す、又は視覚的な要素を判別するための唯一の視覚的手段になっていない。</p>",
+                "note": "<p>この達成基準は、特に色の知覚に関するものである。その他の知覚形態については、色やその他の視覚的提示のコーディングへのプログラムによるアクセスも含めて、<a href=\"#adaptable\">ガイドライン 1.3 で網羅されている。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/use-of-color.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.4.2",
+                "title": "音声の制御",
+                "level": "A",
+                "description": "<p>ウェブページ上にある音声が自動的に再生され、3 秒より長く続く場合、その音声を一時停止又は停止するメカニズム、もしくはシステム全体の音量レベルに影響を与えずに音量レベルを調整できるメカニズムが利用できる。</p>",
+                "note": "<p>この達成基準を満たさないコンテンツでは、利用者がそのウェブページ全体を使用できない恐れがあるため、ウェブページ上のすべてのコンテンツは他の達成基準を満たすために用いられているか否かにかかわらず、この達成基準を満たさなければならない。<a href=\"#cc5\">適合要件 5: 非干渉を参照。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/audio-control.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.4.3",
+                "title": "コントラスト (最低限)",
+                "level": "AA",
+                "description": "<p>テキスト及び文字画像の視覚的提示に、少なくとも 4.5:1 のコントラスト比がある。ただし、次の場合は除く:</p><dl><dt>サイズの大きなテキスト</dt><dd>サイズの大きなテキスト及びサイズの大きな文字画像に、少なくとも 3:1 のコントラスト比がある。</dd><dt>付随的</dt><dd>テキスト又は文字画像において、次の場合はコントラストの要件はない。アクティブではないユーザインタフェース コンポーネントの一部である、純粋な装飾である、誰も視覚的に確認できない、又は重要な他の視覚的なコンテンツを含む写真の一部分である。</dd><dt>ロゴタイプ</dt><dd>ロゴ又はブランド名の一部である文字には、最低限のコントラストの要件はない。</dd></dl>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/contrast-minimum.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.4.4",
+                "title": "テキストのサイズ変更",
+                "level": "AA",
+                "description": "<p>キャプション及び文字画像を除き、テキストは、コンテンツ又は機能を損なうことなく、支援技術なしで 200％ まででサイズ変更できる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/resize-text.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.4.5",
+                "title": "文字画像",
+                "level": "AA",
+                "description": "<p>使用している技術で意図した視覚的提示が可能である場合、文字画像ではなくテキストが情報伝達に用いられている。ただし、次に挙げる場合を除く:</p><dl><dt>カスタマイズ可能</dt><dd>文字画像は、利用者の要求に応じた視覚的なカスタマイズができる。</dd><dt>必要不可欠</dt><dd>テキストの特定の提示が、伝えようとする情報にとって必要不可欠である。</dd></dl>",
+                "note": "<p>ロゴタイプ (ロゴ又はブランド名の一部である文字) は必要不可欠なものであると考えられる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/images-of-text.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.4.6",
+                "title": "コントラスト (高度)",
+                "level": "AAA",
+                "description": "<p>テキスト及び文字画像の視覚的提示に、少なくとも 7:1 のコントラスト比がある。ただし、次の場合は除く:</p><dl><dt>サイズの大きなテキスト</dt><dd>サイズの大きなテキスト及びサイズの大きな文字画像に、少なくとも 4.5:1 のコントラスト比がある。</dd><dt>付随的</dt><dd>テキスト又は文字画像において、次の場合はコントラストの要件はない。アクティブではないユーザインタフェース コンポーネントの一部である、純粋な装飾である、誰も視覚的に確認できない、又は重要な他の視覚的なコンテンツを含む写真の一部分である。</dd><dt>ロゴタイプ</dt><dd>ロゴ又はブランド名の一部である文字には、最低限のコントラストの要件はない。</dd></dl>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/contrast-enhanced.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.4.7",
+                "title": "小さな背景音、又は背景音なし",
+                "level": "AAA",
+                "description": "<p>収録済の音声しか含まないコンテンツで、(1) 前景に主として発話を含み、(2) 音声 CAPTCHA 又は音声ロゴではなく、かつ、(3) 例えば、歌やラップなどのように、主として音楽表現を意図した発声ではないものについては、次に挙げる事項のうち、少なくとも一つを満たしている:</p><ul><li>背景音なし: 音声は背景音を含まない。</li><li>消音: 背景音を消すことができる。</li><li>20 デシベル: 背景音は、前景にある発話のコンテンツより少なくとも 20 デシベルは低い。ただし、継続時間が 2 秒以内で発生頻度が低い背景音は除く。</li></ul>",
+                "note": "<p>デシベルの定義によれば、この要件を満たす背景音は、前景にある発話のコンテンツの約 4 分の 1 の大きさになる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/low-or-no-background-audio.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.4.8",
+                "title": "視覚的提示",
+                "level": "AAA",
+                "description": "<p>テキストブロックの視覚的提示において、次を実現するメカニズムが利用できる:</p><ul><li>利用者が、前景色と背景色を選択できる。</li><li>幅が 80 文字以下である (全角文字の場合は、40 文字以下)。</li><li>テキストが、均等割り付けされていない (左右の端で揃えられていない)。</li><li>段落中の行間は、少なくとも 1.5 倍ある。そして、段落の間隔は、その行間の少なくとも 1.5 倍ある。</li><li>テキストは、支援技術なしで 200％ までサイズ変更でき、利用者が水平方向にスクロールする必要がない (全画面表示のウィンドウにおいて)。</li></ul>",
+                "note": "<p>コンテンツがこれらの値を用いる必要はない。要求事項は、利用者がこれらの提示の外観を変更するメカニズムを利用できることである。このメカニズムは、ブラウザ又は他のユーザエージェントによって提供されることがある。コンテンツがこのメカニズムを提供する必要はない。</p><p>言語の中には、書記体系において、可読性及び視認性を向上させるために用いる提示の概念が異なるものもある。ある書記体系でこの達成基準における提示の概念が用いられていない場合、その書記体系のコンテンツは、その提示の設定を用いる必要はなく、その提示の設定なしでも適合できる。コンテンツ制作者は、可読性及び視認性を向上させるために、言語の書記体系のガイドラインに従うことが推奨される。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/visual-presentation.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.4.9",
+                "title": "文字画像 (例外なし)",
+                "level": "AAA",
+                "description": "<p>文字画像は、純粋な装飾に用いられているか、テキストの特定の提示が伝えようとする情報にとって必要不可欠である場合に用いられている。</p>",
+                "note": "<p>ロゴタイプ (ロゴ又はブランド名の一部である文字) は必要不可欠なものであると考えられる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/images-of-text-no-exception.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.4.10",
+                "title": "リフロー",
+                "level": "AA",
+                "new_in_21": true,
+                "description": "<p>コンテンツは、情報又は機能を損なうことなく、かつ、以下において 2 次元スクロールを必要とせずに提示できる:</p><ul><li>縦スクロールのコンテンツを 320 CSS ピクセル幅で</li><li>横スクロールのコンテンツを 256 CSS ピクセル高で</li></ul><p>利用や意味の理解に 2 次元のレイアウトを必要とする一部のコンテンツを除く。</p>",
+                "note": "<p>320 CSS ピクセルは、400% ズーム時の開始ビューポート幅 1280 CSS ピクセルに相当する。横スクロールになるように設計されたウェブコンテンツ (例えば、縦書きのテキスト) の場合、256 CSS ピクセルは、400% ズーム時の開始ビューポート高さ 1024 CSS ピクセルに相当する。</p><p>2 次元のレイアウトを必要とするコンテンツの例としては、理解のために必要な画像 (地図、図解など)、映像、ゲーム、プレゼンテーション、データテーブル (個々のセルではない)、及びコンテンツを操作している間にツールバーを表示しておく必要のあるインタフェースが挙げられる。コンテンツのそのような部分には、2 次元スクロールを提供することが許容される。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/reflow.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.4.11",
+                "title": "非テキストのコントラスト",
+                "level": "AA",
+                "new_in_21": true,
+                "description": "<p>以下の視覚的提示には、隣接した色との間で少なくとも 3:1 のコントラスト比がある。</p><dl><dt>ユーザインタフェース コンポーネント</dt><dd>ユーザインタフェース コンポーネント及び状態を特定するのに必要な視覚的情報。ただし、アクティブではないコンポーネント、又はそのコンポーネントの見た目がユーザエージェントによって決定され、コンテンツ制作者が変更しない場合は除く。</dd><dt>グラフィカルオブジェクト</dt><dd>コンテンツを理解するのに必要なグラフィックの部分。ただし、グラフィックの特定の提示が、伝えようとする情報にとって必要不可欠である場合は除く。</dd></dl>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/non-text-contrast.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.4.12",
+                "title": "テキストの間隔",
+                "level": "AA",
+                "new_in_21": true,
+                "description": "<p>以下のテキストスタイルプロパティをサポートするマークアップ言語を用いて実装されているコンテンツにおいては、以下をすべて設定し、かつ他のスタイルプロパティを変更しないことによって、コンテンツ又は機能の損失が生じない:</p><ul><li>行の高さ (行間) をフォントサイズの少なくとも 1.5 倍に設定する</li><li>段落に続く間隔をフォントサイズの少なくとも 2 倍に設定する</li><li>文字の間隔 (字間) をフォントサイズの少なくとも 0.12 倍に設定する</li><li>単語の間隔をフォントサイズの少なくとも 0.16 倍に設定する</li></ul>",
+                "note": "<p>例外: テキスト表記においてこれらのテキストスタイルプロパティの一つ以上を使用しない自然言語及び文字体系では、その言語と文字体系の組み合わせに存在するプロパティだけを用いて、この達成基準に適合することができる。</p><p>コンテンツが、これらのテキストの間隔の値を用いる必要はない。要求事項は、制作者が指定したテキストの間隔を利用者が上書きした場合に、コンテンツ又は機能が失われないことである。</p><p>言語の中には、書記体系において、例えば段落開始のインデントのように、異なるテキストの間隔の設定が用いられるものもある。コンテンツ制作者は、テキストの可読性及び視認性を向上させるために、その書記体系の、その地域に適用されるガイドラインに従うことが推奨される。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/text-spacing.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "1.4.13",
+                "title": "ホバー又はフォーカスで表示されるコンテンツ",
+                "level": "AA",
+                "new_in_21": true,
+                "description": "<p>ポインタホバー又はキーボードフォーカスを受け取ってから外すことで、追加コンテンツを表示させてから非表示にさせる場合は、以下の要件を全て満たす:</p><dl><dt>非表示にすることができる</dt><dd>ポインタホバー又はキーボードフォーカスが追加コンテンツのトリガーとなった場合、その追加コンテンツを、ポインタホバー又はキーボードフォーカスを動かすこと以外の方法で非表示にするメカニズムが存在する。ただし、追加コンテンツが入力エラーを伝える、又は他のコンテンツを不明瞭にしたり置き換えたりしない場合は除く。</dd><dt>ホバーすることができる</dt><dd>ポインタホバーが追加コンテンツのトリガーとなった場合、追加コンテンツの上にポインタを動かすことができ、追加コンテンツが消えることがない。</dd><dt>表示が継続される</dt><dd>追加コンテンツは、ホバー又はフォーカスのトリガーが取り除かれる、利用者が非表示にする、又はその情報が有効でなくなるまで表示され続ける。</dd></dl>",
+                "note": "<p>例外: 追加コンテンツの視覚的提示がユーザエージェントによって制御されていて、かつコンテンツ制作者によって変更されていない場合は例外とする。</p><p>ホバー時やフォーカス時に表示されるカスタムツールチップ、サブメニュー、他の非モーダルポップアップは、この達成基準の適用対象となる「追加コンテンツ」の例である。</p><p>この達成基準は、トリガーとなるコンポーネント自体に追加で表示されるコンテンツに対して適用される。キーボードフォーカスによって可視化される非表示のコンポーネント (例えば、ページの別の部分にスキップするためのリンク) は追加コンテンツを提示しないため、この達成基準の適用対象外である。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/content-on-hover-or-focus.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "principle": "2",
+        "title": "操作可能",
+        "description": "ユーザインタフェース コンポーネント及びナビゲーションは操作可能でなければならない。",
+        "guidelines": [
+          {
+            "guideline": "2.1",
+            "title": "キーボードアクセシブル",
+            "description": "すべての機能をキーボードから利用できるようにすること。",
+            "success_criteria": [
+              {
+                "criterion": "2.1.1",
+                "title": "キーボード",
+                "level": "A",
+                "description": "<p>コンテンツのすべての機能は、個々のキーストロークに特定のタイミングを要することなく、キーボードインタフェースを通じて操作可能である。ただし、その根本的な機能が利用者の動作による終点だけではない軌跡に依存する入力を必要とする場合は除く。</p>",
+                "note": "<p>上記の例外は、根本的な機能に関するものであり、入力手法に関するものではない。例えば、テキスト入力に手書き入力を用いるのであれば、その入力手法 (手書き) は利用者の動作による軌跡に依存した入力を必要とするが、その根本的な機能 (テキスト入力) は利用者の動作による軌跡に依存した入力を必要とするものではない。</p><p>これは、キーボード操作に加えて、マウス入力、又はその他の入力手段を提供することを禁ずるものでも妨げるものでもない。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/keyboard.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.1.2",
+                "title": "キーボードトラップなし",
+                "level": "A",
+                "description": "<p>キーボードインタフェースを用いてキーボードフォーカスをそのウェブページのあるコンポーネントに移動できる場合、キーボードインタフェースだけを用いてそのコンポーネントからフォーカスを外すことが可能である。さらに、修飾キーを伴わない矢印キー、Tab キー、又はフォーカスを外すその他の標準的な方法でフォーカスを外せない場合は、フォーカスを外す方法が利用者に通知される。</p>",
+                "note": "<p>この達成基準を満たさないコンテンツでは、利用者がそのウェブページ全体を使用できない恐れがあるため、ウェブページ上のすべてのコンテンツは他の達成基準を満たすために用いられているか否かにかかわらず、この達成基準を満たさなければならない。<a href=\"#cc5\">適合要件 5: 非干渉を参照。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/no-keyboard-trap.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.1.3",
+                "title": "キーボード (例外なし)",
+                "level": "AAA",
+                "description": "<p>コンテンツのすべての機能は、個々のキーストロークに特定のタイミングを要することなく、キーボードインタフェースを通じて操作可能である。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/keyboard-no-exception.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.1.4",
+                "title": "文字キーのショートカット",
+                "level": "A",
+                "new_in_21": true,
+                "description": "<p>文字 (大文字と小文字を含む)、句読点、数字、又は記号のみを使用したキーボードショートカットがコンテンツに実装されている場合、少なくとも次のいずれかを満たしている:</p><dl><dt>解除</dt><dd>ショートカットを解除するメカニズムが利用できる。</dd><dt>再マップ</dt><dd>一つ以上の非印字キー (例えば、Ctrl、Alt など) を含むようにショートカットを再マップするメカニズムが利用できる。</dd><dt>フォーカス時のみ有効</dt><dd>ユーザインタフェース コンポーネントのキーボードショートカットは、そのコンポーネントにフォーカスがあるときのみ有効になる。</dd></dl>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/character-key-shortcuts.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              }
+            ]
+          },
+          {
+            "guideline": "2.2",
+            "title": "十分な時間",
+            "description": "利用者がコンテンツを読み、使用するために十分な時間を提供すること。",
+            "success_criteria": [
+              {
+                "criterion": "2.2.1",
+                "title": "タイミング調整可能",
+                "level": "A",
+                "description": "<p>コンテンツに制限時間を設定する場合は、次に挙げる事項のうち、少なくとも一つを満たしている</p><dl><dt>解除</dt><dd>制限時間があるコンテンツを利用する前に、利用者がその制限時間を解除することができる。又は、</dd><dt>調整</dt><dd>制限時間があるコンテンツを利用する前に、利用者が少なくともデフォルト設定の 10 倍を超える、大幅な制限時間の調整をすることができる。又は、</dd><dt>延長</dt><dd>時間切れになる前に利用者に警告し、かつ少なくとも 20 秒間の猶予をもって、例えば、「スペースキーを押す」などの簡単な操作により、利用者が制限時間を少なくとも 10 倍以上延長することができる。又は、</dd><dt>リアルタイムの例外</dt><dd>リアルタイムのイベント (例えば、オークション) において制限時間が必須の要素で、その制限時間に代わる手段が存在しない。又は、</dd><dt>必要不可欠の例外</dt><dd>制限時間が必要不可欠なもので、制限時間を延長することがコンテンツの動作を無効にすることになる。又は、</dd><dt>20 時間の例外</dt><dd>制限時間が 20 時間よりも長い。</dd></dl>",
+                "note": "<p>この達成基準は、制限時間の結果として、コンテンツ又は状況の予期せぬ変化を引き起こさないように利用者がタスクを完了できるようにするためのものである。この達成基準は、利用者の動作の結果としてのコンテンツ又はコンテキストの変化を制限する<a href=\"#on-focus\">達成基準 3.2.1 と併せて考慮すること。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/timing-adjustable.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.2.2",
+                "title": "一時停止、停止、非表示",
+                "level": "A",
+                "description": "<p>動きのある、点滅している、スクロールする、又は自動更新する情報は、次のすべての事項を満たしている</p><dl><dt>動きのある、点滅している、又はスクロールしている情報</dt><dd>動きのある、点滅している、又はスクロールしている情報が、(1) 自動的に開始し、(2) 5 秒よりも長く継続し、かつ、(3) その他のコンテンツと並行して提示される場合、利用者がそれらを一時停止、停止、又は非表示にすることのできるメカニズムがある。ただし、その動き、点滅、又はスクロールが必要不可欠な動作の一部である場合は除く。</dd><dt>自動更新する情報</dt><dd>自動更新する情報が、(1) 自動的に開始し、 (2) その他のコンテンツと並行して提示される場合、利用者がそれを一時停止、停止、若しくは非表示にする、又はその更新頻度を調整することのできるメカニズムがある。ただし、その自動更新が必要不可欠な動作の一部である場合は除く。</dd></dl>",
+                "note": "<p>画面がちらつき、又は閃光を放つコンテンツに関する要件は、<a href=\"#seizures-and-physical-reactions\">ガイドライン 2.3 を参照。</p><p>この達成基準を満たさないコンテンツでは、利用者がそのウェブページ全体を使用できない恐れがあるため、ウェブページ上のすべてのコンテンツは他の達成基準を満たすために用いられているか否かにかかわらず、この達成基準を満たさなければならない。<a href=\"#cc5\">適合要件 5: 非干渉を参照。</p><p>定期的にソフトウェアによって自動的に更新されるコンテンツ、又はユーザエージェントにストリーム配信されるコンテンツでは、コンテンツ再生の一時停止と再開の操作の間に生成、又は受信される情報を保持、又は提示する必要はない。これは技術的に不可能であることが考えられ、多くの状況において利用者の混乱を招くことにつながる可能性があるためである。</p><p>コンテンツの読み込み中やそれに類似した状況の一部として表示されるアニメーションについては、この段階ですべての利用者に対していかなるインタラクションも発生する可能性がなく、かつコンテンツ読み込みの進行状況を表示しないことが利用者の混乱を招いたり、コンテンツが動作を停止した、又はコンテンツが破損しているという誤解を生じたりする可能性がある場合には、必要不可欠なものと考えることができる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/pause-stop-hide.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.2.3",
+                "title": "タイミング非依存",
+                "level": "AAA",
+                "description": "<p>タイミングは、コンテンツによって提示されるイベント又は動作の必要不可欠な部分ではない。ただし、インタラクティブではない同期したメディア及びリアルタイムのイベントは除く。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/no-timing.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.2.4",
+                "title": "割り込み",
+                "level": "AAA",
+                "description": "<p>割り込みは、利用者が延期、又は抑制することができる。ただし、緊急を要する割り込みは除く。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/interruptions.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.2.5",
+                "title": "再認証",
+                "level": "AAA",
+                "description": "<p>認証済のセッションが切れた場合は、再認証後でもデータを失うことなく利用者が操作を継続できる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/re-authenticating.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.2.6",
+                "title": "タイムアウト",
+                "level": "AAA",
+                "description": "<p>データの損失を引き起こす恐れのある利用者の無操作の残り時間が警告される。ただし、利用者が 20 時間以上何もしなくてもデータが保持される場合は、この限りではない。</p>",
+                "note": "<p>プライバシー関連の規制により、利用者を認証する前や利用者のデータが保存される前に、利用者の明確な同意が必要になる可能性がある。利用者が未成年の場合、ほとんどの司法管轄、国又は地域で、利用者からの明示的な同意を要請することができない。この達成基準に適合するためのアプローチとしてデータの保存を検討する場合は、プライバシーの専門家や弁護士に相談するのが望ましい。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/timeouts.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              }
+            ]
+          },
+          {
+            "guideline": "2.3",
+            "title": "発作と身体的反応",
+            "description": "発作や身体的反応を引き起こすようなコンテンツを設計しないこと。",
+            "success_criteria": [
+              {
+                "criterion": "2.3.1",
+                "title": "3 回の閃光、又は閾値以下",
+                "level": "A",
+                "description": "<p>ウェブページには、どの 1 秒間においても 3 回を超える閃光を放つものがない、又は閃光が一般閃光閾値及び赤色閃光閾値を下回っている。</p>",
+                "note": "<p>この達成基準を満たさないコンテンツでは、利用者がそのウェブページ全体を使用できない恐れがあるため、ウェブページ上のすべてのコンテンツは他の達成基準を満たすために用いられているか否かにかかわらず、この達成基準を満たさなければならない。<a href=\"#cc5\">適合要件 5: 非干渉を参照。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/three-flashes-or-below-threshold.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.3.2",
+                "title": "3 回の閃光",
+                "level": "AAA",
+                "description": "<p>ウェブページには、どの 1 秒間においても 3 回を超える閃光を放つものがない。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/three-flashes.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.3.3",
+                "title": "インタラクションによるアニメーション",
+                "level": "AAA",
+                "description": "<p>アニメーションが、機能又は伝達されている情報に必要不可欠でない限り、インタラクションによって引き起こされるモーションアニメーションを無効にできる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/animation-from-interactions.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              }
+            ]
+          },
+          {
+            "guideline": "2.4",
+            "title": "ナビゲーション可能",
+            "description": "利用者がナビゲートし、コンテンツを探し出すことを手助けする方法を提供すること。",
+            "success_criteria": [
+              {
+                "criterion": "2.4.1",
+                "title": "ブロックスキップ",
+                "level": "A",
+                "description": "<p>複数のウェブページ上で繰り返されているコンテンツのブロックをスキップするメカニズムが利用できる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/bypass-blocks.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.4.2",
+                "title": "ページタイトル",
+                "level": "A",
+                "description": "<p>ウェブページには、主題又は目的を説明したタイトルがある。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/page-titled.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.4.3",
+                "title": "フォーカス順序",
+                "level": "A",
+                "description": "<p>ウェブページが順次ナビゲートできて、そのナビゲーション順序が意味又は操作に影響を及ぼす場合、フォーカス可能なコンポーネントは、意味及び操作性を保持した順序でフォーカスを受け取る。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/focus-order.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.4.4",
+                "title": "リンクの目的 (コンテキスト内)",
+                "level": "A",
+                "description": "<p>それぞれのリンクの目的が、リンクのテキスト単独で、又はリンクのテキストとプログラムによる解釈が可能なリンクのコンテキストとあわせて理解できる。ただし、リンクの目的が一般的に利用者にとって曖昧な場合は除く。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/link-purpose-in-context.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.4.5",
+                "title": "複数の手段",
+                "level": "AA",
+                "description": "<p>ウェブページ一式の中の一つのウェブページを見つける複数の手段が利用できる。ただし、ウェブページが一連のプロセスの中の一つのステップ又は結果である場合は除く。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/multiple-ways.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.4.6",
+                "title": "見出し及びラベル",
+                "level": "AA",
+                "description": "<p>見出し及びラベルは、主題又は目的を説明している。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/headings-and-labels.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.4.7",
+                "title": "フォーカスの可視化",
+                "level": "AA",
+                "description": "<p>キーボード操作が可能なあらゆるユーザインタフェースには、フォーカスインジケータが見える操作モードがある。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/focus-visible.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.4.8",
+                "title": "現在位置",
+                "level": "AAA",
+                "description": "<p>ウェブページ一式の中での利用者の位置に関する情報が利用できる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/location.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.4.9",
+                "title": "リンクの目的 (リンクのみ)",
+                "level": "AAA",
+                "description": "<p>それぞれのリンクの目的を、リンクのテキスト単独で理解できるメカニズムが利用できる。ただし、リンクの目的が一般的に利用者にとって曖昧な場合は除く。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/link-purpose-link-only.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.4.10",
+                "title": "セクション見出し",
+                "level": "AAA",
+                "description": "<p>コンテンツを整理するために、セクション見出しが使用されている。</p>",
+                "note": "<p>「見出し」は、一般的な意味で用いられており、タイトル及び様々なタイプのコンテンツに見出しを付加する他の方法を含む。</p><p>この達成基準は、文書におけるセクションを扱っており、ユーザインタフェース コンポーネントを扱っているわけではない。ユーザインタフェース コンポーネントについては、<a href=\"#name-role-value\">達成基準 4.1.2 で扱われている。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/section-headings.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.4.11",
+                "title": "隠されないフォーカス (最低限)",
+                "level": "AA",
+                "new_in_22": true,
+                "description": "<p>ユーザインタフェース コンポーネントがキーボードフォーカスを受け取るとき、コンテンツ制作者が作成したコンテンツによって、そのコンポーネントの全体が隠されるようなことがない。</p>",
+                "note": "<p>注記 1: 設定可能なインタフェースの中にあるコンテンツが利用者によって再配置可能な場合、この達成基準のテスト及び適合性の対象として検討されるのは、利用者によって移動可能なコンテンツの初期位置だけである。</p><p>注記 2: 利用者が開いたコンテンツによって、フォーカスを受け取るコンポーネントが隠される場合がある。利用者がキーボードフォーカスを移動せずにフォーカスを持つコンポーネントを表示できる場合、そのフォーカスを持つコンポーネントは、コンテンツ制作者が作成したコンテンツによって視覚的に隠されたとはみなされない。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/focus-not-obscured-minimum.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.4.12",
+                "title": "隠されないフォーカス (高度)",
+                "level": "AAA",
+                "new_in_22": true,
+                "description": "<p>ユーザインタフェース コンポーネントがキーボードフォーカスを受け取るとき、コンテンツ制作者が作成したコンテンツによって、そのコンポーネントのどの部分も隠されることがない。</p>",
+                "note": "<p>注記 1: ユーザインタフェース コンポーネント又はサブコンポーネントとして認識されるもの (外周を決定づけるもの) は、その視覚的提示に依存する。視覚的提示には、コンポーネントの可視コンテンツ、ボーダー、及びコンポーネント固有の背景が含まれる。コンポーネントのコンテンツ、背景、又はボーダーの外側にある、影及びグロー効果は含まれない。</p><p>注記 2: フォーカスインジケータを受け取ることができるサブコンポーネントの例としては、開いたドロップダウンメニューのメニュー項目、グリッド内のフォーカス可能なセルなどがある。</p><p>注記 3: コントラストは、(HTML、CSS、及び SVG のような) 技術の中で定義された色を基に計算できる。その際、ユーザエージェントの高解像度化及びアンチエイリアスによって変更されたピクセルは無視できる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/focus-not-obscured-enhanced.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.4.13",
+                "title": "フォーカスの外観",
+                "level": "A",
+                "new_in_22": true,
+                "description": "<p>キーボードのフォーカスインジケータが視覚的に表示される場合、フォーカスインジケータの領域が以下の全てを満たす。</p><ul><li>フォーカスされていないコンポーネント又はサブコンポーネントの、太さ 2 CSS ピクセルの外周の領域と同等以上の大きさである。かつ、</li><li>フォーカスされている状態とフォーカスされていない状態との間で、同一ピクセルに少なくとも 3:1 のコントラスト比がある。</li></ul><p>例外:</p><ul><li>フォーカスインジケータがユーザエージェントによって決定され、かつコンテンツ制作者が調整できない場合。又は、</li><li>コンテンツ制作者がフォーカスインジケータ及びそのインジケータの背景色を変更していない場合。</li></ul>",
+                "note": "<p>注記 1: ユーザインタフェース コンポーネント又はサブコンポーネントとして認識されるもの (外周を決定づけるもの) は、その視覚的提示に依存する。視覚的提示には、コンポーネントの可視コンテンツ、ボーダー、及びコンポーネント固有の背景が含まれる。コンポーネントのコンテンツ、背景、又はボーダーの外側にある、影及びグロー効果は含まれない。</p><p>注記 2: フォーカスインジケータを受け取ることができるサブコンポーネントの例としては、開いたドロップダウンメニューのメニュー項目、グリッド内のフォーカス可能なセルなどがある。</p><p>注記 3: コントラストは、(HTML、CSS、及び SVG のような) 技術の中で定義された色を基に計算できる。その際、ユーザエージェントの高解像度化及びアンチエイリアスによって変更されたピクセルは無視できる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/fixed-reference-points.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              }
+            ]
+          },
+          {
+            "guideline": "2.5",
+            "title": "入力モダリティ",
+            "description": "利用者がキーボード以外の様々な入力を通じて機能を操作しやすくすること。",
+            "success_criteria": [
+              {
+                "criterion": "2.5.1",
+                "title": "ポインタジェスチャ",
+                "level": "A",
+                "new_in_21": true,
+                "description": "<p>マルチポイント又は軌跡ベースのジェスチャを使って操作する機能はすべて、軌跡ベースのジェスチャなしのシングルポインタで操作することができる。ただし、マルチポイント又は軌跡ベースのジェスチャが必要不可欠である場合は例外とする。</p>",
+                "note": "<p>この要件は、ポインタの動作を解釈するウェブコンテンツに適用される (ユーザエージェントや支援技術の操作に必要なアクションには適用されない)。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/pointer-gestures.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.5.2",
+                "title": "ポインタのキャンセル",
+                "level": "A",
+                "new_in_21": true,
+                "description": "<p>シングルポインタを使って操作できる機能は、以下の要件の少なくとも 一つを満たす。</p><dl><dt>ダウンイベントなし</dt><dd>機能を実行するためにダウンイベントは使用されない。</dd><dt>中止又は元に戻す</dt><dd>機能はアップイベントで完了し、かつ機能の完了を中止するメカニズム、又は機能の完了後に機能を元に戻すメカニズムが利用できる。</dd><dt>アップで元に戻す</dt><dd>アップイベントは、先のダウンイベントで実行された機能のあらゆる結果を元に戻す。</dd><dt>必要不可欠</dt><dd>ダウンイベントで機能を完了させることが必要不可欠である。</dd></dl>",
+                "note": "<p>キーボード又はテンキーパッドのキープレスをエミュレートする機能は必須と考えられる。</p><p>この要件は、ポインタの動作を解釈するウェブコンテンツに適用される (ユーザエージェントや支援技術の操作に必要なアクションには適用されない)。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/pointer-cancellation.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.5.3",
+                "title": "ラベルを含む名前",
+                "level": "A",
+                "new_in_21": true,
+                "description": "<p>ユーザインタフェース コンポーネントがテキスト又は文字画像を含むラベルを持つ場合、視覚的に提示されたテキストが名前 (name)に含まれている。</p>",
+                "note": "<p>ベストプラクティスは、ラベルのテキストを名前 (name) の最初に使用することである。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/label-in-name.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.5.4",
+                "title": "動きによる起動",
+                "level": "A",
+                "new_in_21": true,
+                "description": "<p>デバイスの動き又は利用者の動きで操作できる機能は、ユーザインタフェース コンポーネントでも操作でき、かつ偶発的な起動を防ぐために動きへの反応を無効化することができる。ただし、次の場合は除く:</p><dl><dt>サポートされたインタフェース</dt><dd>その動きが、機能を操作するためにアクセシビリティ サポーテッドなインタフェースを通じて使用される。</dd><dt>必要不可欠</dt><dd>その動きが機能にとって必要不可欠であり、この達成基準を満たすと機能が無効になる。</dd></dl>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/motion-actuation.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.5.5",
+                "title": "ターゲットのサイズ (高度)",
+                "level": "AAA",
+                "description": "<p>ポインタ入力のターゲットのサイズは、少なくとも 44 × 44 CSS ピクセルである。ただし、次の場合は除く:</p><dl><dt>同等</dt><dd>同じページに同じ又は同等の機能を持つリンク又はコントロールがあって、そちらは少なくとも 44 × 44 CSS ピクセルである。</dd><dt>インライン</dt><dd>ターゲットが文章中又はテキストブロック中にある。</dd><dt>ユーザエージェントによる制御</dt><dd>ターゲットのサイズが、ユーザエージェントによって決められていて、コンテンツ制作者が変更していない。</dd><dt>必要不可欠</dt><dd>特定のターゲットの提示方法が、情報を伝える上で必要不可欠である。</dd></dl>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/target-size-enhanced.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.5.6",
+                "title": "入力メカニズムの共存",
+                "level": "AAA",
+                "description": "<p>プラットフォームで提供されている入力モダリティの使用を、ウェブコンテンツが制限しない。ただし、その制限が必要不可欠な場合、コンテンツのセキュリティのために必要な場合、又は利用者による設定を尊重するうえで必要な場合は例外とする。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/concurrent-input-mechanisms.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.5.7",
+                "title": "ドラッグ動作",
+                "level": "AA",
+                "new_in_22": true,
+                "description": "<p>操作にドラッグ動作を用いる全ての機能は、ドラッグなしのシングルポインタで完遂できる。ただし、ドラッグが必要不可欠である、又はその機能がユーザエージェントによって決定され、かつコンテンツ制作者によって変更されない場合は除く。</p>",
+                "note": "<p>この要件は、ポインタの動作を解釈するウェブコンテンツに適用される (すなわち、これはユーザエージェント又は支援技術の操作に必要なアクションには適用されない)。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/dragging-movements.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "2.5.8",
+                "title": "ターゲットのサイズ (最低限)",
+                "level": "AA",
+                "new_in_22": true,
+                "description": "<p>ポインタ入力のターゲットのサイズは、少なくとも 24 × 24 CSS ピクセルである。ただし、次の場合は除く:</p><dl><dt>間隔</dt><dd>ターゲットから中心点まで少なくとも 24 CSS ピクセル離れている別のターゲットが存在する。</dd><dt>同等</dt><dd>同じページに同じ又は同等の機能を持つリンク又はコントロールがあって、そちらのターゲットサイズは少なくとも 24 × 24 CSS ピクセルである。</dd><dt>インライン</dt><dd>ターゲットが文章中又はテキストブロック中にある。</dd><dt>ユーザエージェントによる制御</dt><dd>ターゲットのサイズが、ユーザエージェントによって決められていて、コンテンツ制作者が変更していない。</dd><dt>必要不可欠</dt><dd>特定のターゲットの提示方法が、情報を伝える上で必要不可欠である。</dd></dl>",
+                "note": "<p>ターゲット内の位置に基づいて空間的に値を選択できるターゲットは、この達成基準の目的上、一つのターゲットとみなされる。例としては、スライダー、色のグラデーションを表示するカラーピッカー、カーソルを置いた位置を編集できる領域などがある。</p><p>インラインのターゲットの場合、行の高さはテキストのフローに対して垂直方向として解釈されるべきである。例えば、縦書きで表示される言語では、行の高さは水平方向となる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/target-size-minimum.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "principle": "3",
+        "title": "理解可能",
+        "description": "情報及びユーザインタフェースの操作は理解可能でなければならない。",
+        "guidelines": [
+          {
+            "guideline": "3.1",
+            "title": "読み取り可能",
+            "description": "テキストコンテンツの読み取りと理解を可能にすること。",
+            "success_criteria": [
+              {
+                "criterion": "3.1.1",
+                "title": "ページの言語",
+                "level": "A",
+                "description": "<p>それぞれのウェブページのデフォルトの自然言語がどの言語であるか、プログラムによる解釈が可能である。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/language-of-page.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.1.2",
+                "title": "一部分の言語",
+                "level": "AA",
+                "description": "<p>コンテンツの一節、又は語句それぞれの自然言語がどの言語であるか、プログラムによる解釈が可能である。ただし、固有名詞、技術用語、言語が不明な語句、及びすぐ前後にあるテキストの言語の一部になっている単語又は語句は除く。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/language-of-parts.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.1.3",
+                "title": "一般的ではない用語",
+                "level": "AAA",
+                "description": "<p>慣用句及び業界用語を含めて、一般的ではない、又は限定された用法で使われている単語、又は語句の、明確な定義を特定するメカニズムが利用できる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/unusual-words.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.1.4",
+                "title": "略語",
+                "level": "AAA",
+                "description": "<p>略語の元の語、又は意味を特定するメカニズムが利用できる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/abbreviations.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.1.5",
+                "title": "読解レベル",
+                "level": "AAA",
+                "description": "<p>固有名詞や題名を取り除いた状態で、テキストが前期中等教育レベルを超えた読解力を必要とする場合は、補足コンテンツ又は前期中等教育レベルを超えた読解力を必要としない版が利用できる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/reading-level.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.1.6",
+                "title": "発音",
+                "level": "AAA",
+                "description": "<p>文脈において、発音が分からないと単語の意味が不明瞭になる場合、その単語の明確な発音を特定するメカニズムが利用できる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/pronunciation.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              }
+            ]
+          },
+          {
+            "guideline": "3.2",
+            "title": "予測可能",
+            "description": "ウェブページの表示や挙動を予測可能にすること。",
+            "success_criteria": [
+              {
+                "criterion": "3.2.1",
+                "title": "フォーカス時",
+                "level": "A",
+                "description": "<p>いずれのユーザインタフェース コンポーネントも、フォーカスを受け取ったときにコンテキストの変化を引き起こさない。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/on-focus.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.2.2",
+                "title": "入力時",
+                "level": "A",
+                "description": "<p>ユーザインタフェース コンポーネントの設定を変更することが、コンテキストの変化を自動的に引き起こさない。ただし、利用者が使用する前にその挙動を知らせてある場合を除く。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/on-input.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.2.3",
+                "title": "一貫したナビゲーション",
+                "level": "AA",
+                "description": "<p>ウェブページ一式の中にある複数のウェブページ上で繰り返されているナビゲーションのメカニズムは、繰り返されるたびに相対的に同じ順序で出現する。ただし、利用者が変更した場合は除く。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/consistent-navigation.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.2.4",
+                "title": "一貫した識別性",
+                "level": "AA",
+                "description": "<p>ウェブページ一式の中で同じ機能を有するコンポーネントは、一貫して識別できる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/consistent-identification.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.2.5",
+                "title": "要求による変化",
+                "level": "AAA",
+                "description": "<p>コンテキストの変化は利用者の要求によってだけ生じるか、又は、そのような変化を止めるメカニズムが利用できる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/change-on-request.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.2.6",
+                "title": "一貫したヘルプ",
+                "level": "A",
+                "new_in_22": true,
+                "description": "<p>ウェブページが次のヘルプのメカニズムのいずれかを含み、かつ、それらのメカニズムがウェブページ一式の中にある複数のウェブページで繰り返されている場合、他のページコンテンツに対して相対的に同じ順序で出現する。ただし、変更が利用者によって行われた場合は除く。</p><ul><li>人的な連絡先詳細;</li><li>人的な連絡メカニズム;</li><li>セルフヘルプオプション;</li><li>完全に自動化された連絡メカニズム。</li></ul>",
+                "note": "<p>ヘルプのメカニズムは、ページ上で直接提供されることもあれば、その情報を含む別のページへの直接リンクを経由して提供されることもある。</p><p>この達成基準における「他のページコンテンツに対して相対的に同じ順序」は、ページが線形化されたときのコンテンツの並べ方と考えることができる。ヘルプのメカニズムの視覚的な位置は、ページの同じバリエーション (例えば CSS のブレークポイント) に対してページ間で一貫している可能性が高い。利用者は、ページのズーム、ページの向きを変えるなどの変更を発生させることができ、これはページのバリエーションが変化するきっかけになる可能性がある。この達成基準で扱うのは、同じバリエーション (例えば、同じズームレベル、向き) で表示されるページ同士の間における、相対的な順序である。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/consistent-help.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              }
+            ]
+          },
+          {
+            "guideline": "3.3",
+            "title": "入力支援",
+            "description": "利用者の間違いを防ぎ、修正を支援すること。",
+            "success_criteria": [
+              {
+                "criterion": "3.3.1",
+                "title": "エラーの特定",
+                "level": "A",
+                "description": "<p>入力エラーが自動的に検出された場合は、エラーとなっている箇所が特定され、そのエラーが利用者にテキストで説明される。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/error-identification.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.3.2",
+                "title": "ラベル又は説明",
+                "level": "A",
+                "description": "<p>コンテンツが利用者の入力を要求する場合は、ラベル又は説明文が提供されている。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/labels-or-instructions.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.3.3",
+                "title": "エラー修正の提案",
+                "level": "AA",
+                "description": "<p>入力エラーが自動的に検出され、修正方法を提案できる場合、その提案が利用者に提示される。ただし、セキュリティ又はコンテンツの目的を損なう場合は除く。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/error-suggestion.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.3.4",
+                "title": "誤り防止 (法的、金融、データ)",
+                "level": "AA",
+                "description": "<p>利用者にとって法律行為もしくは金融取引が生じる、利用者が制御可能なデータストレージシステム上のデータを変更もしくは削除する、又は利用者が試験の解答を送信するウェブページでは、次に挙げる事項のうち、少なくとも一つを満たしている</p><dl><dt>取消</dt><dd>送信を取り消すことができる。</dd><dt>チェック</dt><dd>利用者が入力したデータの入力エラーがチェックされ、利用者には修正する機会が提供される。</dd><dt>確認</dt><dd>送信を完了する前に、利用者が情報の見直し、確認及び修正をするメカニズムが利用できる。</dd></dl>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/error-prevention-legal-financial-data.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.3.5",
+                "title": "ヘルプ",
+                "level": "AAA",
+                "description": "<p>コンテキストに応じたヘルプが利用できる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/help.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.3.6",
+                "title": "誤り防止 (すべて)",
+                "level": "AAA",
+                "description": "<p>利用者に情報の送信を要求するウェブページでは、次に挙げる事項のうち、少なくとも一つを満たしている</p><dl><dt>取消</dt><dd>送信を取り消すことができる。</dd><dt>チェック</dt><dd>利用者が入力したデータの入力エラーがチェックされ、利用者には修正する機会が提供される。</dd><dt>確認</dt><dd>送信を完了する前に、利用者が情報の見直し、確認及び修正をするメカニズムが利用できる。</dd></dl>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/error-prevention-all.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.3.7",
+                "title": "冗長な入力項目",
+                "level": "A",
+                "new_in_22": true,
+                "description": "<p>以前に利用者によって入力された、又は利用者に対して提供された情報であって、同一のプロセスにおいて再入力する必要がある情報は、次のいずれかである。</p><dl><dt>自動入力</dt><dd>自動的に入力される、又は</dd><dt>選択による入力</dt><dd>利用者が選択することによって入力できる</dd></dl><p>ただし、次の場合は除く:</p><ul><li>情報の再入力が、セキュリティのために必要不可欠である</li><li>以前に入力された情報がもはや有効でない</li><li>情報の再入力が必要不可欠である</li></ul>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/redundant-entry.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.3.8",
+                "title": "アクセシブルな認証 (最低限)",
+                "level": "AA",
+                "new_in_22": true,
+                "description": "<p>認知機能テスト (パスワードを記憶する、パズルを解く、など) は、認証プロセスのどのステップにおいても要求されない。ただし、そのステップが次の少なくとも一つを提供する場合は除く。</p><dl><dt>代替</dt><dd>認知機能テストに依存しない認証方法</dd><dt>メカニズム</dt><dd>認知機能テストを完了するのを支援するメカニズム</dd><dt>物体の認識</dt><dd>認知機能テストが、物体の認識である</dd><dt>個人特有のコンテンツ</dt><dd>認知機能テストが、利用者が提供した個人特有のコンテンツの識別である</dd></dl>",
+                "note": "<p>「物体の認識」及び「個人特有のコンテンツ」は、画像、映像、又は音声によって表現される場合がある。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/accessible-authentication-minimum.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "3.3.9",
+                "title": "アクセシブルな認証 (高度)",
+                "level": "AAA",
+                "new_in_22": true,
+                "description": "<p>認知機能テスト (パスワードを記憶する、パズルを解く、など) は、認証プロセスのどのステップにおいても要求されない。ただし、そのステップが次の少なくとも一つを提供する場合は除く。</p><dl><dt>代替</dt><dd>認知機能テストに依存しない認証方法</dd><dt>メカニズム</dt><dd>認知機能テストを完了するのを支援するメカニズム</dd></dl>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/accessible-authentication-enhanced.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "principle": "4",
+        "title": "堅牢",
+        "description": "コンテンツは、支援技術を含む様々なユーザエージェントが確実に解釈できるように十分に堅牢 (robust) でなければならない。",
+        "guidelines": [
+          {
+            "guideline": "4.1",
+            "title": "互換性",
+            "description": "現在及び将来の、支援技術を含むユーザエージェントとの互換性を最大化すること。",
+            "success_criteria": [
+              {
+                "criterion": "4.1.1",
+                "title": "構文解析",
+                "level": "A",
+                "description": "<p>マークアップ言語を用いて実装されているコンテンツにおいては、要素には完全な開始タグ及び終了タグがあり、要素は仕様に準じて入れ子になっていて、要素には重複した属性がなく、どの ID も一意的である。ただし、仕様で認められているものを除く。</p>",
+                "note": "<p>この達成基準はもともと、支援技術が直接 HTML を構文解析する際の問題に対処するために採用された。支援技術は、もはや直接 HTML を構文解析する必要がなくなった。その結果、これらの問題はもはや存在しない、又は他の達成基準によって対処されている。この達成基準はもはや有用ではないため、WCAG 2.2 では削除された。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/parsing.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "4.1.2",
+                "title": "名前 (name)、役割 (role)、及び値 (value)",
+                "level": "A",
+                "description": "<p>すべてのユーザインタフェース コンポーネント (フォームを構成する要素、リンク、スクリプトが生成するコンポーネントなど) では、名前 (name) 及び役割 (role) は、プログラムによる解釈が可能である。又、状態、プロパティ、利用者が設定可能な値はプログラムによる設定が可能である。そして、支援技術を含むユーザエージェントが、これらの項目に対する変更通知を利用できる。 </p>",
+                "note": "<p>この達成基準は、主に独自のユーザインタフェース コンポーネントを開発、又はスクリプトで実装するコンテンツ制作者に向けたものである。例えば、標準的な HTML のコントロールを仕様に沿って使用していれば、既にこの達成基準を満たしていることになる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/name-role-value.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              },
+              {
+                "criterion": "4.1.3",
+                "title": "ステータスメッセージ",
+                "level": "AA",
+                "new_in_21": true,
+                "description": "<p>マークアップ言語を使って実装されたコンテンツでは、ステータスメッセージは、役割 (role) 又はプロパティを通してプログラムによる解釈が可能であり、フォーカスを受けとらなくても支援技術によって利用者に提示することができる。</p>",
+                "understanding_url": "https://waic.jp/translations/WCAG22/Understanding/status-messages.html",
+                "techniques_url": "https://waic.jp/translations/WCAG22/Techniques/"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "total_criteria": 78,
+      "level_a": 30,
+      "level_aa": 24,
+      "level_aaa": 24,
+      "new_in_21": [
+        "1.3.4",
+        "1.3.5",
+        "1.4.10",
+        "1.4.11",
+        "1.4.12",
+        "1.4.13",
+        "2.1.4",
+        "2.5.1",
+        "2.5.2",
+        "2.5.3",
+        "2.5.4",
+        "4.1.3"
+      ],
+      "new_in_22": [
+        "2.4.11",
+        "2.4.12",
+        "2.4.13",
+        "2.5.7",
+        "2.5.8",
+        "3.2.6",
+        "3.3.7",
+        "3.3.8",
+        "3.3.9"
+      ],
+      "deleted_in_22": [
+        "4.1.1"
+      ],
+      "last_updated": "2025-08-15",
+      "source": "https://waic.jp/translations/WCAG22/",
+      "understanding_docs": "https://waic.jp/translations/WCAG22/Understanding/",
+      "techniques_docs": "https://waic.jp/translations/WCAG22/Techniques/"
+    }
+  }
+}

@@ -1,0 +1,157 @@
+---
+import wcagData from '../assets/wcag_22.json';
+import type { WCAGData, SuccessCriterion } from '../types/wcag';
+
+const typedWcagData = wcagData as WCAGData;
+const allCriteria: SuccessCriterion[] = [];
+
+// すべての達成基準を1つの配列にまとめる
+for (const principle of typedWcagData.wcag22.principles) {
+  for (const guideline of principle.guidelines) {
+    for (const criterion of guideline.success_criteria) {
+      allCriteria.push(criterion);
+    }
+  }
+}
+---
+
+<div class="mb-4 flex gap-4 items-center">
+    <div>
+        <label for="guideline-filter" class="block text-sm font-medium text-gray-700 mb-1">ガイドライン</label>
+        <select id="guideline-filter" aria-label="ガイドラインを選択" class="border border-gray-300 rounded px-3 py-2 text-sm">
+            <option value="2.2">WCAG 2.2</option>
+            <option value="2.1">WCAG 2.1</option>
+            <option value="2.0">WCAG 2.0（JIS X 8341-3:2016）</option>
+        </select>
+    </div>
+    <div>
+        <label for="level-filter" class="block text-sm font-medium text-gray-700 mb-1">適合レベル</label>
+        <select id="level-filter" aria-label="適合レベルを選択" class="border border-gray-300 rounded px-3 py-2 text-sm">
+            <option value="all">すべて</option>
+            <option value="A">適合レベル A</option>
+            <option value="AA">適合レベル AA</option>
+            <option value="AAA">適合レベル AAA</option>
+        </select>
+    </div>
+</div>
+
+<table id="wcag-table" class="w-full border-collapse border border-gray-300">
+    <thead>
+        <tr class="bg-gray-100">
+            <th scope="col" class="border border-gray-300 px-2 py-1 text-sm">No.</th>
+            <th scope="col" class="border border-gray-300 px-2 py-1 text-sm">達成基準</th>
+            <th scope="col" class="border border-gray-300 px-2 py-1 text-sm">概要</th>
+            <th scope="col" class="border border-gray-300 px-2 py-1 text-sm">適合レベル</th>
+            <th scope="col" class="border border-gray-300 px-2 py-1 text-sm">適用</th>
+            <th scope="col" class="border border-gray-300 px-2 py-1 text-sm">適合</th>
+            <th scope="col" class="border border-gray-300 px-2 py-1 text-sm">備考</th>
+            <th scope="col" class="border border-gray-300 px-2 py-1 text-sm">解説書</th>
+        </tr>
+    </thead>
+    <tbody>
+        {allCriteria.map((criterion) => (
+            <tr 
+                class={`${criterion.new_in_22 ? 'bg-blue-50 border-blue-300 new_in_22' : criterion.new_in_21 ? 'bg-green-50 border-green-300 new_in_21' : ''} level-${criterion.level}`}
+            >
+                <td class="border border-gray-300 px-2 py-1 text-sm">{criterion.criterion}</td>
+                <td class="border border-gray-300 px-2 py-1 text-sm font-medium">{criterion.title}</td>
+                <td class="border border-gray-300 px-2 py-1 text-sm">
+                    <div class="max-w-md" set:html={criterion.description}></div>
+                </td>
+                <td class="border border-gray-300 px-2 py-1 text-sm text-center">
+                    <span class={`px-2 py-1 rounded text-xs font-semibold ${
+                        criterion.level === 'A' ? 'bg-green-100 text-green-800' :
+                        criterion.level === 'AA' ? 'bg-yellow-100 text-yellow-800' :
+                        'bg-red-100 text-red-800'
+                    }`}>
+                        {criterion.level}
+                    </span>
+                </td>
+                <td class="border border-gray-300 px-2 py-1 text-sm">
+                    <select class="w-full text-xs">
+                        <option value="">未選択</option>
+                        <option value="applicable">適用</option>
+                        <option value="not-applicable">非適用</option>
+                    </select>
+                </td>
+                <td class="border border-gray-300 px-2 py-1 text-sm">
+                    <select class="w-full text-xs">
+                        <option value="">未選択</option>
+                        <option value="pass">適合</option>
+                        <option value="fail">不適合</option>
+                    </select>
+                </td>
+                <td class="border border-gray-300 px-2 py-1 text-sm">
+                    <textarea class="w-full text-xs resize-none" rows="2" placeholder="備考を入力"></textarea>
+                </td>
+                <td class="border border-gray-300 px-2 py-1 text-sm text-center">
+                    <a 
+                        href={criterion.understanding_url} 
+                        target="_blank" 
+                        aria-label={`${criterion.title}の解説（日本語訳）`}
+                        class="text-blue-600 hover:text-blue-800 underline text-xs"
+                    >
+                        解説
+                    </a>
+                </td>
+            </tr>
+        ))}
+    </tbody>
+</table>
+
+<style>
+    .hidden-row {
+        display: none;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const guidelineFilter = document.getElementById('guideline-filter') as HTMLSelectElement;
+        const levelFilter = document.getElementById('level-filter') as HTMLSelectElement;
+        const tableRows = document.querySelectorAll('#wcag-table tbody tr');
+
+        function applyFilters() {
+            const selectedGuideline = guidelineFilter.value;
+            const selectedLevel = levelFilter.value;
+
+            // 全ての行を一度表示状態にリセット
+            tableRows.forEach(row => {
+                row.classList.remove('hidden-row');
+            });
+
+            // ガイドラインフィルター
+            if (selectedGuideline === '2.0') {
+                // WCAG 2.0を選択: 2.1と2.2で追加された項目を非表示
+                document.querySelectorAll('#wcag-table .new_in_21, #wcag-table .new_in_22').forEach(row => {
+                    row.classList.add('hidden-row');
+                });
+            } else if (selectedGuideline === '2.1') {
+                // WCAG 2.1を選択: 2.2で追加された項目を非表示
+                document.querySelectorAll('#wcag-table .new_in_22').forEach(row => {
+                    row.classList.add('hidden-row');
+                });
+            }
+
+            // 適合レベルフィルター
+            if (selectedLevel === 'A') {
+                // レベルAを選択: AA、AAAを非表示
+                document.querySelectorAll('#wcag-table .level-AA:not(.hidden-row), #wcag-table .level-AAA:not(.hidden-row)').forEach(row => {
+                    row.classList.add('hidden-row');
+                });
+            } else if (selectedLevel === 'AA') {
+                // レベルAAを選択: AAAを非表示
+                document.querySelectorAll('#wcag-table .level-AAA:not(.hidden-row)').forEach(row => {
+                    row.classList.add('hidden-row');
+                });
+            }
+        }
+
+        // イベントリスナーを追加
+        guidelineFilter.addEventListener('change', applyFilters);
+        levelFilter.addEventListener('change', applyFilters);
+
+        // 初期フィルターを適用
+        applyFilters();
+    });
+</script>
