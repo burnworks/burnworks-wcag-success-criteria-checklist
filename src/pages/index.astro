@@ -4,5 +4,28 @@ import Table from "../components/Table.astro";
 ---
 
 <Layout>
-    <Table />
+    <header class="p-4 bg-gray-900 text-white">
+        <h1 class="text-lg font-bold mx-auto max-w-480">WCAG 達成基準チェックリスト</h1>
+    </header>
+    <main class="px-4 py-6">
+        <div class="mx-auto max-w-480">
+            <Table />
+        </div>
+    </main>
+    <footer class="px-4 py-6 bg-gray-100">
+        <small class="block text-sm mx-auto max-w-480">
+            by
+            <a href="https://x.com/burnworks" target="_blank" aria-label="@burnworks - X アカウント" title="@burnworks - X アカウント"> @burnworks </a>
+            and
+            <a
+                href="https://burnworks.com/"
+                target="_blank"
+                aria-label="バーンワークス株式会社 - ウェブアクセシビリティ対応に強いウェブサイト制作会社"
+                title="バーンワークス株式会社 - ウェブアクセシビリティ対応に強いウェブサイト制作会社"
+            >
+                burnworks Inc.
+            </a>
+            2025
+        </small>
+    </footer>
 </Layout>
