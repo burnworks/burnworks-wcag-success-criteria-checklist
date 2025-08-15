@@ -1,1 +1,71 @@
 @import "tailwindcss";
+
+@layer components {
+    html {
+        @apply scroll-smooth;
+    }
+    body {
+        @apply leading-6;
+    }
+    .description-area {
+        dl {
+            @apply mt-4;
+
+            dt {
+                @apply font-bold;
+            }
+            dd {
+                @apply pl-4;
+
+                + dt {
+                    @apply mt-2;
+                }
+            }
+        }
+        ul {
+            @apply mt-4 ml-4 list-disc marker:text-gray-400;
+        }
+        > * + p {
+            @apply mt-4;
+        }
+    }
+    .hidden-row {
+        @apply hidden;
+    }
+}
+
+@media print {
+    @page {
+        size: A3 landscape;
+        margin: 15mm 20mm 15mm 20mm;
+    }
+
+    html, body {
+        @apply w-full h-full m-0 p-0 bg-white;
+    }
+
+    header, footer {
+        @apply hidden;
+    }
+
+    .wcag-table-area {
+        @apply w-full;
+
+        table {
+            @apply w-full;
+
+            tr {
+                th:last-child,
+                td:last-child {
+                    @apply hidden;                    
+                }
+                th:nth-child(3),
+                td:nth-child(3),
+                th:nth-child(73),
+                td:nth-child(7) {
+                    @apply w-150;
+                }
+            }
+        }
+    }
+}
