@@ -1,13 +1,18 @@
 ---
 import "../styles/global.css";
+
+const title: string = "WCAG 達成基準チェックリスト";
+const description: string = "WCAG 達成基準チェックリストを HTML で。WCAG 2.0 ～ 2.2 までのバージョンと、適合レベルを選択できます。";
 ---
 
 <!doctype html>
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<title>Astro Basics</title>
+		<link rel="icon" type="image/x-icon" href="./favicon.ico" />
 	</head>
 	<body>
 		<slot />
